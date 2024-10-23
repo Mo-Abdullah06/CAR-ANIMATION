@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+body{
+    overflow: hidden;
+}
+.sky{
+    height: 100vh;
+    width: 100%;
+    background-image: url(./assests/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+    animation: car linear 2s infinite;
+
+}
+.tree{
+    position: absolute;
+    background-image: url(./assests/trees.png);
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+    bottom: 150;
+}
+
+.track{
+    position: absolute;
+    background-image: url(./assests/track.png);
+    height: 200px;
+    width: 800vw;
+    bottom: 0;
+    animation: track linear 15s infinite;
+    overflow: hidden;
+}
+
+
+.car{
+    position: absolute;
+    background-image: url(./assests/download.png);
+    height: 100px;
+    width: 320px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    bottom: 70;
+    left: 200;
+    animation: car linear 2s infinite;
+}
+@keyframes track{
+100%{
+    transform: translateX(-500vw);
+}
+}
+@keyframes car {
+    0%{
+        transform:translateY(-5px) ;
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(-5px);
+    }
+    
+}
+@media screen and (max-width: 576px){
+    .car{
+        height: 100px;
+        width: 300px;
+        position: absolute;
+        left: 80;
+    animation: car linear 2s infinite;
+
+    }
+    .track{
+    animation: track linear 5s infinite;
+        
+    }
+    body{
+        overflow: hidden;
+    }
+}
